@@ -44,3 +44,31 @@ let actores: actor[] = [
         ]
     }
 ]
+
+// Interfaces (son objetos que no tienen contenido, solo definiciones. Es como el esqueleto de una clase. Define estructuras de clases)
+
+interface Vehicle {
+    //_engines: number;
+    wheels: number;
+    getEngines():number
+}
+
+/*
+class Car implements Vehicle {
+    constructor(public engines: number, public wheels: number) {}
+    public getEngines():number {return 5;}
+}
+*/
+
+class Car implements Vehicle {
+    private _engines:number;
+    wheels:number;
+    constructor(engines: number, wheels: number) {
+        this._engines = engines;
+        this.wheels = wheels;
+    }
+
+    public getEngines():number {return this._engines;}
+}
+
+let mini = new Car(4,4);

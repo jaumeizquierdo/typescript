@@ -21,3 +21,21 @@ var miVehiculo = {
 console.log(miVehiculo);
 miVehiculo.color = "rojo";
 console.log(miVehiculo);
+var actores = [
+    {
+        nombre: "John Travolta",
+        nacimiento: "18-02-1954",
+        peliculas: [
+            "Grease"
+        ]
+    }
+];
+var Car = /** @class */ (function () {
+    function Car(engines, wheels) {
+        this.engines = engines;
+        this.wheels = wheels;
+    }
+    Car.prototype.getEngines = function () { return 5; };
+    return Car;
+}());
+var mini = new Car(4, 4);
